@@ -7,11 +7,12 @@ const session = require('express-session'); // Přidáme express-session pro spr
 const express = require('express');
 const app = express();
 
-// Define your routes here
+// Nastavení portu pomocí proměnné prostředí nebo defaultní hodnoty
+const PORT = process.env.PORT || 10000;
 
 // Make sure to assign the result of app.listen() to a variable
-const server = app.listen(10000, () => {
-    console.log('Server is running on port 10000');
+const server = app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
 const io = socketIo(server); // Inicializace Socket.IO s serverem
