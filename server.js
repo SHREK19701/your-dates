@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 
 // Nastavení portu pomocí proměnné prostředí nebo defaultní hodnoty
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 4000;
 
 // Make sure to assign the result of app.listen() to a variable
 const server = app.listen(PORT, () => {
